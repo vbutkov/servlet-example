@@ -49,11 +49,11 @@ public class HttpServer {
 
             byte[] body = Files.readAllBytes(Path.of("/home/melchior/IdeaProjects/HttpEx/src/main/resources/request.json"));
 
-            String headers = """
-                    HTTP/1.1 200 OK
-                    content-type: text/html  
-                    content-length: 24 
-                    """;
+//            String headers = """
+//                    HTTP/1.1 200 OK
+//                    content-type: text/html
+//                    content-length: 24
+//                    """;
             //""".formatted("<h1> 404 not Found </h1>".length());
 
             String sBody = "<h1> 404 not Found </h1>";
@@ -62,7 +62,7 @@ public class HttpServer {
                               String.format("content-length: %s", sBody.length() + "\n").toString();
 
 
-            System.out.println(headers);
+            //System.out.println(headers);
             System.out.println(headers2);
 
             dataOutputStream.write(headers2.getBytes());
