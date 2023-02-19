@@ -62,7 +62,6 @@ public class HttpServer {
                     String.format("content-length: %s", sBody.length() + "\n").toString();
 
 
-            // System.out.println(headers);
             System.out.println(headers2);
 
             dataOutputStream.write(headers2.getBytes());
